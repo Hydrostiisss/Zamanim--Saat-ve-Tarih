@@ -1,4 +1,4 @@
-# ⏰ ClockWise
+# ⏰ Zamanım
 
 Modern ve kullanıcı dostu zaman yönetim platformu
 
@@ -13,7 +13,7 @@ Modern ve kullanıcı dostu zaman yönetim platformu
 
 ## 📖 Proje Hakkında
 
-ClockWise, modern web teknolojileri kullanılarak geliştirilmiş kapsamlı bir zaman yönetim platformudur. Öğrenciler, profesyoneller ve zaman takibi yapan herkes için tasarlanmış bu uygulama, saat gösterimi, takvim, kronometre, zamanlayıcı ve dünya saatleri gibi temel özellikleri tek bir arayüzde toplar.
+Zamanım, modern web teknolojileri kullanılarak geliştirilmiş kapsamlı bir zaman yönetim platformudur. Öğrenciler, profesyoneller ve zaman takibi yapan herkes için tasarlanmış bu uygulama, saat gösterimi, takvim, kronometre, zamanlayıcı ve dünya saatleri gibi temel özellikleri tek bir arayüzde toplar.
 
 ### 🎯 Geliştirme Amacı
 
@@ -155,7 +155,7 @@ ClockWise, modern web teknolojileri kullanılarak geliştirilmiş kapsamlı bir 
 
 ## 📱 Responsive Tasarım
 
-ClockWise, tüm cihazlarda kusursuz çalışacak şekilde tasarlanmıştır:
+Zamanım, tüm cihazlarda kusursuz çalışacak şekilde tasarlanmıştır:
 
 - **Desktop** (1200px+): Tam grid düzeni, yan yana kartlar
 - **Tablet** (768px - 1200px): İki kolonlu düzen
@@ -187,7 +187,7 @@ ClockWise, tüm cihazlarda kusursuz çalışacak şekilde tasarlanmıştır:
 
 ## 📁 Proje Yapısı
 
-clockwise/
+zamanim/
 ├── index.html # Ana HTML yapısı ve içerik
 ├── style.css # Tüm CSS stilleri ve animasyonlar
 ├── script.js # JavaScript mantığı ve fonksiyonlar
