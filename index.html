@@ -1,0 +1,219 @@
+<!-- Made by Utku Gökyer-->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeFlow - Profesyonel Zaman Yönetimi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-bg"></div>
+    <header>
+        <div class="header-content">
+            <h1><i class="fas fa-clock"></i> TimeFlow </h1>
+            <nav class="main-nav">
+                <button class="nav-btn active" data-section="clock">Saat</button>
+                <button class="nav-btn" data-section="calendar">Takvim</button>
+                <button class="nav-btn" data-section="world">Dünya</button>
+                <button class="nav-btn" data-section="tools">Araçlar</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="clock-section" class="section active">
+            <div class="clock-container">
+                <div class="digital-clock">
+                    <div class="time-wrapper">
+                        <div class="time-display">
+                            <span id="hours">00</span>
+                            <span class="separator">:</span>
+                            <span id="minutes">00</span>
+                            <span class="separator">:</span>
+                            <span id="seconds">00</span>
+                        </div>
+                    </div>
+                    <div class="date-display" id="dateDisplay">1 Ocak 2024, Pazartesi</div>
+                    <div class="timezone-info">
+                        <span>GMT+3 (İstanbul)</span>
+                        <span class="location-dot"></span>
+                    </div>
+                    <div class="manual-time-controls">
+                        <h3>Manuel Saat Ayarı</h3>
+                        <div class="time-inputs">
+                            <input type="number" id="setHours" min="0" max="23" placeholder="Saat">
+                            <input type="number" id="setMinutes" min="0" max="59" placeholder="Dakika">
+                            <input type="number" id="setSeconds" min="0" max="59" placeholder="Saniye">
+                        </div>
+                        <button class="set-time-btn" id="setTimeBtn">Saati Ayarla</button>
+                    </div>
+                </div>
+                <div class="analog-clock">
+                    <div class="clock-face">
+                        <div class="hand hour-hand" id="hourHand"></div>
+                        <div class="hand minute-hand" id="minuteHand"></div>
+                        <div class="hand second-hand" id="secondHand"></div>
+                        <div class="center-dot"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="time-details">
+                <div class="detail-card">
+                    <h3><i class="fas fa-sun"></i> Gün Doğumu/Batımı</h3>
+                    <div class="sun-info">
+                        <div class="sun-item">
+                            <i class="fas fa-arrow-up"></i>
+                            <span id="sunrise">06:15</span>
+                        </div>
+                        <div class="sun-item">
+                            <i class="fas fa-arrow-down"></i>
+                            <span id="sunset">18:30</span>
+                        </div>
+                    </div>
+                </div>
+<!-- Made by Utku Gökyer-->
+                <div class="detail-card weather-info">
+                    <h3><i class="fas fa-cloud-sun"></i> Hava Durumu</h3>
+                    <div class="weather-main">
+                        <i class="fas fa-sun weather-icon"></i>
+                        <div>
+                            <span class="temperature">24°C</span>
+                            <span class="weather-desc">Açık</span>
+                        </div>
+                    </div>
+                    <div class="weather-details">
+                        <span><i class="fas fa-tint"></i> %45</span>
+                        <span><i class="fas fa-wind"></i> 12 km/s</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="calendar-section" class="section">
+            <div class="calendar-wrapper">
+                <div class="calendar-header">
+                    <button class="nav-btn calendar-nav-btn" id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                    <h2 id="monthYear">Ocak 2024</h2>
+                    <button class="nav-btn calendar-nav-btn" id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                
+                <div class="calendar-view">
+                    <div class="weekdays">
+                        <div>Pzt</div><div>Sal</div><div>Çar</div><div>Per</div><div>Cum</div><div>Cmt</div><div>Paz</div>
+                    </div>
+                    <div class="calendar-grid" id="calendarGrid"></div>
+                </div>
+            </div>
+        </section>
+        <section id="world-section" class="section">
+            <div class="world-map-container">
+                <div class="world-map">
+                    <div class="timezone-marker" style="left: 15%; top: 50%;">
+                        <span>New York</span>
+                        <span class="timezone-time" data-timezone="America/New_York">--:--</span>
+                    </div>
+                    <div class="timezone-marker" style="left: 38%; top: 50%;">
+                        <span>Londra</span>
+                        <span class="timezone-time" data-timezone="Europe/London">--:--</span>
+                    </div>
+                    <div class="timezone-marker" style="left: 50%; top: 50%;">
+                        <span>İstanbul</span>
+                        <span class="timezone-time" data-timezone="Europe/Istanbul">--:--</span>
+                    </div>
+                    <div class="timezone-marker" style="left: 85%; top: 50%;">
+                        <span>Tokyo</span>
+                        <span class="timezone-time" data-timezone="Asia/Tokyo">--:--</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="world-clocks-grid">
+            </div>
+        </section>
+        <section id="tools-section" class="section">
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3><i class="fas fa-stopwatch"></i> Kronometre</h3>
+                    <div class="stopwatch-display" id="stopwatchDisplay">00:00:00</div>
+                    <div class="stopwatch-controls">
+                        <button class="tool-btn start" id="startStopwatch">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="tool-btn stop" id="stopStopwatch">
+                            <i class="fas fa-pause"></i>
+                        </button>
+                        <button class="tool-btn reset" id="resetStopwatch">
+                            <i class="fas fa-redo"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3><i class="fas fa-hourglass-half"></i> Geri Sayım</h3>
+                    <div class="countdown-display" id="countdownDisplay">00:00:00</div>
+                    <div class="countdown-inputs">
+                        <input type="number" id="countdownHours" placeholder="Saat" min="0" max="23">
+                        <input type="number" id="countdownMinutes" placeholder="Dakika" min="0" max="59">
+                        <input type="number" id="countdownSeconds" placeholder="Saniye" min="0" max="59">
+                    </div>
+                    <div class="countdown-controls">
+                        <button class="tool-btn start" id="startCountdown">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="tool-btn stop" id="stopCountdown">
+                            <i class="fas fa-pause"></i>
+                        </button>
+                        <button class="tool-btn reset" id="resetCountdown">
+                            <i class="fas fa-redo"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3><i class="fas fa-exchange-alt"></i> Saat Dönüştürücü</h3>
+                    <div class="converter-form">
+                        <select id="fromTimezone">
+                            <option value="Europe/Istanbul">İstanbul (GMT+3)</option>
+                            <option value="Europe/London">Londra (GMT+0)</option>
+                            <option value="America/New_York">New York (GMT-5)</option>
+                            <option value="Asia/Tokyo">Tokyo (GMT+9)</option>
+                        </select>
+                        <input type="time" id="fromTime" value="12:00">
+                        <div class="arrow-down"><i class="fas fa-arrow-down"></i></div>
+                        <select id="toTimezone">
+                            <option value="Europe/London">Londra (GMT+0)</option>
+                            <option value="Europe/Istanbul">İstanbul (GMT+3)</option>
+                            <option value="America/New_York">New York (GMT-5)</option>
+                            <option value="Asia/Tokyo">Tokyo (GMT+9)</option>
+                        </select>
+                        <div class="converted-time" id="convertedTime">--:--</div>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3><i class="fas fa-brain"></i> Pomodoro</h3>
+                    <div class="pomodoro-display" id="pomodoroDisplay">25:00</div>
+                    <div class="pomodoro-modes">
+                        <button class="mode-btn active" data-time="25">Çalışma</button>
+                        <button class="mode-btn" data-time="5">Kısa Mola</button>
+                        <button class="mode-btn" data-time="15">Uzun Mola</button>
+                    </div>
+                    <div class="pomodoro-controls">
+                        <button class="tool-btn start" id="startPomodoro">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="tool-btn stop" id="stopPomodoro">
+                            <i class="fas fa-pause"></i>
+                        </button>
+                        <button class="tool-btn reset" id="resetPomodoro">
+                            <i class="fas fa-redo"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- Made by Utku Gökyer-->
+<!-- Made by Utku Gökyer-->
