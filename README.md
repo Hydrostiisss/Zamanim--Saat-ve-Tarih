@@ -7,7 +7,7 @@ Modern ve kullanıcı dostu zaman yönetim platformu
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-**[🔗 Canlı Demo](https://your-demo-link.com)**
+**[🔗 Canlı Demo](https://zamanim.vercel.app/)**
 
 ---
 
